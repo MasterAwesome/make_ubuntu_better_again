@@ -44,7 +44,6 @@ echo "Writing shortcuts to $ACCELS_PATH [3/4]"
 if [[ $CONTAINS_TERM_SHORT -le 0 ]]; then
 	echo "F4 terminal" >> $ACCELS_PATH
 fi
-echo "Restarting nautilus [4/4]"
 
-# Restarting nautilus.
+echo "Restarting nautilus [4/4]"
 nautilus -q
