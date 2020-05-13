@@ -5,6 +5,7 @@ This repository is a storage for my scripts to install and make ubuntu a little 
 1. One shot installation of a couple of necessary libs for development and usability.
 2. Allows F4 to open a terminal in any directory using nautilus.
 3. Radare2 bleeding edge installation.
+4. Installs python packages from requirements.txt
 
 ### Usage:
 `./ubuntu_install.sh` # DO NOT RUN THIS AS ROOT.
