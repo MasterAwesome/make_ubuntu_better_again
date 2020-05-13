@@ -15,6 +15,7 @@ pyelftools
 pygments
 pytest
 python-ptrace
+pwn
 requests
 ROPgadget
 six
