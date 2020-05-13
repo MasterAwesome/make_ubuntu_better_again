@@ -16,7 +16,7 @@
 
 # Installs all the essential packages.
 echo "[*] Installing packages" 
-sudo apt-get install -y neovim build-essential libcurl4-gnutls-dev libxml2-dev libssl-dev git git-email gimp cmake clang clang-tools clang-format clang-tidy ruby gdb python3-dev python3-pip libglib2.0-dev libc6-dbg
+sudo apt-get install -y neovim build-essential libcurl4-gnutls-dev libxml2-dev libssl-dev git git-email gimp cmake clang clang-tools clang-format clang-tidy ruby gdb python3-dev python3-pip libglib2.0-dev libc6-dbg qemu qemu-system
 
 # Installs libc one_gadget identifier.
 echo "[*] Installing one_gadget"
