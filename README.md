@@ -1,4 +1,4 @@
-# make_ubuntu_better_scripts
+# make_ubuntu_great_again
 This repository is a storage for my scripts to install and make ubuntu a little nicer.
 
 ### Features:
