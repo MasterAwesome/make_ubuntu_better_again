@@ -30,13 +30,7 @@ echo "[*] Installing terminal shortcuts"
 ./write_terminal_shortcut.sh
 
 # Downloads and installs radare2 continous
-echo "[*] Downloading radare2."
-wget https://github.com/radareorg/radare2/releases/download/continuous/radare2-dev_4.5.0-git_amd64.deb -O radare2-dev.deb
-wget https://github.com/radareorg/radare2/releases/download/continuous/radare2_4.5.0-git_amd64.deb -O radare2.deb
-echo "[*] Installing radare2-dev"
-sudo apt-get install ./radare2-dev.deb
-echo "[*] Installing radare2"
-sudo apt-get install ./radare2.deb
+./download_radare.sh
 
 # Installs a few python packages
 pip3 install --user -r ./requirements.txt
