@@ -15,6 +15,10 @@
 #   along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 # Directory setup
+
+# Check if there's nautilus before making changes
+hash nautilus 2> /dev/null || { echo >&2 "Not using nautilus... Exiting"; exit 0; }
+
 DIR="$HOME/.local/share/nautilus/scripts"
 ACCELS_PATH="$HOME/.config/nautilus/scripts-accels"
 CONTAINS_TERM_SHORT=$(cat $ACCELS_PATH | grep terminal | wc -l)
