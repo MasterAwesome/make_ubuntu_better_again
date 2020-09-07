@@ -19,7 +19,13 @@ echo "[*] Installing packages"
 sudo apt-get install -y neovim build-essential libcurl4-gnutls-dev \
 libxml2-dev libssl-dev git git-email gimp cmake clang clang-tools \
 clang-format clang-tidy ruby gdb python3-dev python3-pip libglib2.0-dev \
-libc6-dbg qemu qemu-system geany python-is-python3 gcc-multilib hexedit nmap nasm curl patchelf
+libc6-dbg qemu qemu-system geany python-is-python3 gcc-multilib hexedit \
+nmap nasm curl patchelf docker.io
+
+# Make sure we have a local docker directory
+echo "[*] Updating docker paths"
+mkdir -p "$HOME/docker"
+echo -ne "{\n\t\"data-root\":\"$HOME/docker\"\n}\n" | sudo tee /etc/docker/daemon.json
 
 # Installs libc one_gadget identifier.
 echo "[*] Installing one_gadget"
