@@ -14,19 +14,5 @@
 #   You should have received a copy of the GNU General Public License
 #   along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-URL="https://github.com/radareorg/radare2/releases/tag/continuous" 
-FILES="$(curl $URL -s | egrep "href.*deb" | cut -d'"' -f2)"
-PREFIX="https://github.com"
-idx=0
-for file in $FILES;
-do
-	echo "[*] Downloading $file."
-	OUT="radare$idx.deb"
-	wget "$PREFIX$file" -O "$OUT"
-	echo "[*] Installing $file"
-	sudo apt-get install "./$OUT" -y
-	echo "[.] Installed $file; Cleaning up"
-	rm "$OUT"
-	idx=$(($idx+1))
-done
-
+# sadly we don't have any continous git builds for fedora but fedora is kinda bleeding edge so lets pull from there
+sudo dnf install radare2
