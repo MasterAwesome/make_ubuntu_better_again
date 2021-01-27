@@ -26,7 +26,8 @@ radare2 radare2-devel latexmk texlive texlive-xetex \
 texlive-collection-latexrecommended texlive-collection-science \
 texlive-collection-xetex texlive-preprint texstudio libhid-devel \
 strace ltrace libatomic gstreamer1-plugin-openh264 mozilla-openh264 \
-openssl openssl-devel m4
+openssl openssl-devel m4 ncurses-compat-libs ncurses-devel \
+java-11-openjdk-devel java-11-openjdk iotop htop meld
 
 # Multimedia
 echo "[*] Installing multimedia codecs"
@@ -38,6 +39,9 @@ echo "[*] Installing one_gadget"
 sudo gem install one_gadget
 
 pip3 install --user -r ./requirements.txt
+
+# Linking vim to nvim
+sudo ln -s /usr/bin/nvim /usr/bin/vim
 
 ## AYYYY
 echo "[.] ALL DONE! Enjoy this now decent linux distribution"
