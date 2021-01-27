@@ -16,16 +16,26 @@
 
 # Installs all the essential packages.
 echo "[*] Installing packages" 
-sudo apt-get install -y neovim build-essential libcurl4-gnutls-dev \
-libxml2-dev libssl-dev git git-email gimp cmake clang clang-tools \
-clang-format clang-tidy ruby gdb python3-dev python3-pip libglib2.0-dev \
-libc6-dbg qemu qemu-system geany python-is-python3 gcc-multilib hexedit \
-nmap nasm curl patchelf docker.io
+sudo apt-get install -y adb bc bison build-essential ccache clang clang-format clang-tidy \
+	clang-tools cmake curl docker.io fastboot firmware-amd-graphics firmware-iwlwifi \
+	flex g++-multilib gcc-doc gcc-multilib gdb geany gimp git git-email gnupg gperf \
+	hexedit imagemagick krita latexmk lib32ncurses5-dev lib32readline-dev lib32z1-dev \
+	libavcodec-extra libc6-dbg libcurl4-gnutls-dev libglib2.0-dev libhidapi-* \
+	libhidapi-dev liblz4-tool libncurses5 libncurses5-dev libsdl1.2-dev libssl-dev \
+	libusb-1.0-0-dev libxml2 libxml2-dev libxml2-utils ltrace lzop m4 nasm neovim \
+	nmap openssl patchelf pkgconf pngcrush python-is-python3 python3-dev python3-pip \
+	python3-setuptools qemu qemu-system qt5-qmake qtbase5-dev qtcreator rsync ruby \
+	schedtool squashfs-tools strace texlive texlive-science texlive-xetex texstudio \
+	valgrind vlc xsltproc zip zlib1g-dev libxcb-xtest0
 
 # Make sure we have a local docker directory
 echo "[*] Updating docker paths"
 mkdir -p "$HOME/docker"
 echo -ne "{\n\t\"data-root\":\"$HOME/docker\"\n}\n" | sudo tee /etc/docker/daemon.json
+
+# Update adb rules
+sudo curl --create-dirs -L -o /etc/udev/rules.d/51-android.rules https://raw.githubusercontent.com/snowdream/51-android/master/51-android.rules
+sudo chmod a+r /etc/udev/rules.d/51-android.rules
 
 # Installs libc one_gadget identifier.
 echo "[*] Installing one_gadget"

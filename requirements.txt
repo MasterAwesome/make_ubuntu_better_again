@@ -8,7 +8,6 @@ future
 html5lib
 isort!=4.3.0
 nltk
-pandas
 pip
 psutil>=3.1.0
 pwn
@@ -19,6 +18,5 @@ pytest
 python-ptrace>=0.8
 requests
 six==1.12.0
-sklearn
 testresources
-unicorn==1.0.2rc3
+unicorn==1.0.2rc1
